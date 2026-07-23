@@ -1,0 +1,25 @@
+# Secrets — never committed. Copy .env.example to .env locally.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Raw dataset bulk — keep provenance in git, keep bulk out of it.
+# Un-ignore a specific small file if committing it is genuinely useful.
+datasets/**
+!datasets/.gitkeep
+!datasets/*/
+!datasets/**/SOURCE.md
+
+# Eval run artifacts too large for git (transcripts, traces) — the eval .md
+# summarizes them; point at external storage from there if needed.
+evals/artifacts/
+
+# Python / Node / OS
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+dist/
+.DS_Store

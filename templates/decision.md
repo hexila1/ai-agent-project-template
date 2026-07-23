@@ -1,33 +1,21 @@
 ---
-title:
-status: Accepted     # Proposed | Accepted | Superseded
 updated: YYYY-MM-DD
-tags: []
-type: decision
 ---
 
-# Decision: <short title of the choice made>
+# Decision: <the choice made>
 
-**Date:** YYYY-MM-DD
-**Status:** Accepted
+**Context.** <What forced a choice; the constraints that applied at the time.>
 
-## Context
+**Decision.** <What was chosen. One or two sentences.>
 
-<What situation forced a choice. Constraints that applied at the time.>
+**Rejected.**
 
-## Decision
+- <Alternative> — <why not; link a note or eval if the reason is empirical.>
+- <Alternative> — <why not.>
 
-<What was chosen. One or two sentences, stated plainly.>
+**Consequences.** <What this makes easier, what it makes harder, and the
+risks it accepts — cost, latency, tool privilege, provider lock-in.>
 
-## Alternatives rejected
-
-- **<Alternative A>** — <why rejected>
-- **<Alternative B>** — <why rejected>
-
-## Consequences
-
-<What this makes easier, what it makes harder, what it locks in.>
-
-## Revisit if
-
-<Conditions under which this decision should be re-evaluated.>
+**Revisit if.** <Conditions that would reopen this — a failing eval, a model
+or provider change, an incident, a new capability that removes the
+constraint.>
