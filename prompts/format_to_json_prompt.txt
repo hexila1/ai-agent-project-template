@@ -1,0 +1,20 @@
+# PROMPT: format_to_json
+# TYPE: zero-shot
+# USE: convert unstructured text into strict JSON for downstream processing
+# INPUT: {schema} — the target JSON structure; {content} — the text to convert
+# CONFIG: use model.temperature from config/config.yaml (keep low for valid JSON)
+
+Convert the content below into JSON matching the given schema.
+
+Rules:
+- Respond with ONLY the JSON object. No preamble, no markdown fences, no commentary.
+- Every field in the schema must be present. Use null for values not found in
+  the content — never invent data.
+- Preserve original wording in string values; do not paraphrase.
+- Dates must be formatted YYYY-MM-DD.
+
+Schema:
+{schema}
+
+Content:
+{content}

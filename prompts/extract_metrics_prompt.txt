@@ -1,0 +1,19 @@
+# PROMPT: extract_metrics
+# TYPE: zero-shot
+# USE: pull quantitative facts out of a document or log so they can be tabled
+# INPUT: {document} — the raw text to analyze
+# CONFIG: use model.temperature and model.max_tokens_summary from config/config.yaml
+
+Extract every quantitative metric from the document below.
+
+Rules:
+- Report ONLY values explicitly present in the text. Never estimate or infer.
+- If a value has a unit, keep the unit exactly as written.
+- If a value depends on a software version, capture the version alongside it.
+- If no metrics are present, output exactly: NO_METRICS_FOUND
+
+Output a markdown table with columns:
+| Metric | Value | Unit | Context (quote fragment, max 10 words) |
+
+Document:
+{document}
